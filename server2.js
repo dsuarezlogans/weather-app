@@ -17,7 +17,7 @@ const argv = yargs
     .argv;
 
 const encodedAddress = encodeURIComponent(argv.address),
-      addressURL = `http://maps.oogleapis.com/maps/api/geocode/json?address=${encodedAddress}`;
+      addressURL = `http://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}`;
 
 axios.get(addressURL)
     .then(response => {
